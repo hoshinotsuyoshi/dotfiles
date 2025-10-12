@@ -1,0 +1,36 @@
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Semicolon"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Command|Shift"
+
+[font]
+size = 12
+
+[font.bold]
+family = "Droid Sans Mono Slashed for Powerline"
+
+[font.italic]
+family = "Droid Sans Mono Slashed for Powerline"
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[keyboard]
+
+[colors.cursor]
+cursor = "#00FFFF" # cyan
+text = "#000000"
+
+[cursor]
+style = { shape = "Block" }

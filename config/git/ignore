@@ -1,0 +1,42 @@
+# vim
+*.swp
+
+# Emacs
+*~
+
+# OSX
+.DS_Store
+
+# WebStorm
+/.idea
+
+# ruby
+vendor/bundle
+.bundle/*
+
+# dotenv, direnv
+.env
+.envrc
+
+.node-version
+node_modules
+
+#.ruby-version
+
+.yardoc
+
+dump.sql
+dump.test.sql
+
+# ansible vault
+.vault_pass
+
+.python-version
+
+.nuxt
+
+**/vendor/bundle
+**/.bundle/*
+
+.tool-versions
+.ruby-version

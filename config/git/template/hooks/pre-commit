@@ -1,0 +1,22 @@
+#!/usr/bin/ruby
+# frozen_string_literal: true
+
+diff = `git diff --cached`
+
+diff.each_line.grep(/^\+[^\+]/).each do |d|
+  if /\bAKIA/ =~ d
+    puts 'AWS_ACCESS_KEY might be in this index. Please check with git diff --cached'
+    puts d
+    exit 1
+  end
+
+  # see https://codepoints.net/U+3099
+  # see https://codepoints.net/U+309A
+  #
+  dakuten_handakuten = /[\u{3099}\u{309A}]/
+
+  next unless dakuten_handakuten =~ d
+  puts 'dakuten or handakuten might be in this index. Please check with git diff --cached'
+  puts d
+  exit 1
+end

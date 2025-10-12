@@ -1,0 +1,26 @@
+# Default user settings (private email for all projects)
+[user]
+  email = guitarpopnot330@gmail.com
+  name  = hoshinotsuyoshi
+  #signingkey = C06827B443E51564
+
+# Override with office email for route06 projects
+[includeIf "gitdir:~/.local/share/go/src/github.com/route06/"]
+  path = ~/.config/git/config.office
+[alias]
+  co = checkout
+  cv = commit -v
+  merge = merge --gpg-sign
+[core]
+  editor = nvim
+[push]
+  default = current
+[init]
+  templatedir = ~/.config/git/template
+  defaultBranch = main
+[ghq]
+  root = ~/.local/share/go/src
+#[gpg]
+#	program = /usr/local/bin/gpg
+#[commit]
+#	gpgsign = true
