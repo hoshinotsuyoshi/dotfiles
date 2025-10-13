@@ -40,3 +40,4 @@ dump.test.sql
 
 .tool-versions
 .ruby-version
+.serena
