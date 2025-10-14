@@ -132,6 +132,7 @@ task main: [
 
   # neovim
   :check_neovim,
+  :check_ripgrep,
   :ln_nvim_files,
   :rbenv_ruby_build,
 
@@ -313,6 +314,14 @@ task check_neovim: :check_macports do
 rescue
   red_puts 'error!'
   red_puts 'Do $ sudo port install neovim'
+  abort
+end
+
+task check_ripgrep: :check_macports do
+  which 'rg'
+rescue
+  red_puts 'error!'
+  red_puts 'Do $ sudo port install ripgrep'
   abort
 end
 
