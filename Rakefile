@@ -355,6 +355,7 @@ task :check_home_entries do
     .claude.json
     .claude.json.backup
     .config
+    .cursor
     .docker
     .gnupg
     .local
