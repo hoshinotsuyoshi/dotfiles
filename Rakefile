@@ -373,6 +373,7 @@ task :check_home_entries do
     .ssh
     .tmux.conf
     .vscode
+    .viminfo
     .z
     .zshenv
     Applications
