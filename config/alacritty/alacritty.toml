@@ -33,4 +33,6 @@ cursor = "#00FFFF" # cyan
 text = "#000000"
 
 [cursor]
-style = { shape = "Block" }
+style = { shape = "Block", blinking = "On" }
+blink_interval = 250
+blink_timeout = 0
