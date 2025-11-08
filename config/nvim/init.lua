@@ -121,6 +121,21 @@ require("lazy").setup({
 
   -- File tree
   { "nvim-tree/nvim-tree.lua", config = true },
+
+  -- Treesitter
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = { "markdown", "markdown_inline", "typescript", "tsx", "javascript" },
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = false,
+        },
+      })
+    end,
+  },
 })
 
 -- ------------------------------------------------------------------------
