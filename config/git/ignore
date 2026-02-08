@@ -43,3 +43,9 @@ dump.test.sql
 .serena
 
 **/.claude/settings.local.json
+
+log.txt
+screenshots/
+
+plan*.md
+issue*.md

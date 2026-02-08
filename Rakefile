@@ -51,7 +51,7 @@ def check_directory_entries(dir_path, allowlist)
   if unexpected.empty?
     puts "✅ No unexpected entries under #{dir_path}"
   else
-    red_puts '🚨 Unexpected entries found:'
+    red_puts "🚨 #{dir_path} Unexpected entries found:"
     unexpected.sort.each { |name| puts "  - #{name}" }
     abort 'Unexpected entries exist. Please clean up or update allowlist.'
   end
@@ -360,12 +360,19 @@ task :check_home_entries do
     .Trash
     .aws
     .cache
+    .cagent
     .claude
     .claude.json
     .claude.json.backup
+    .codex
     .config
+    .continue
     .cursor
+    .deno
     .docker
+    .e2b
+    .envrc
+    .gemini
     .gnupg
     .local
     .npm
@@ -392,15 +399,20 @@ end
 
 task :check_config_entries do
   allowlist = Set.new(%w[
+    .DS_Store
     alacritty
+    anydocs
     bundler
+    configstore
     gh
     git
     irb
     mise
     nvim
+    pnpm
     rbenv
     tmux
+    trigger
     zed
     zsh
   ])

@@ -155,3 +155,4 @@ fi
 # postgresql  postgresql14  postgresql14 none
 # python      none          python311 none
 # python3     none          python311 none
+export PATH="$HOME/.local/bin:$PATH"
