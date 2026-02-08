@@ -130,6 +130,9 @@ task main: [
   # less
   :setup_less_dir,
 
+  # zed
+  :ln_zed_files,
+
   # neovim
   :check_neovim,
   :check_ripgrep,
@@ -234,6 +237,15 @@ task :ln_zsh_files do
   ln_sf File.expand_path('config/zsh/.zshenv'), "#{target}/.zshenv"
   ln_sf File.expand_path('config/zsh/.zprofile'), "#{target}/.zprofile"
   ln_sf File.expand_path('config/zsh/.zsh.d'), "#{target}/.zsh.d"
+end
+
+task :ln_zed_files do
+  mkdir_p "#{xdg_config_home}/zed/themes"
+  target = "#{xdg_config_home}/zed"
+  rm_f! "#{target}/settings.json"
+  rm_f! "#{target}/themes/me.json"
+  ln_sf File.expand_path('config/zed/settings.json'), "#{target}/settings.json"
+  ln_sf File.expand_path('config/zed/themes/me.json'), "#{target}/themes/me.json"
 end
 
 task :ln_nvim_files do
